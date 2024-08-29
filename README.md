@@ -9,6 +9,10 @@ El usuario debe poder realizar las siguientes acciones dentro de la aplicación 
 - Iniciar sesión
 - Registrarse
 
+A tener en cuenta:
+- Un usuario tipo *administrador* podrá acceder y ver su información personal además de ver un listado de todos los usuarios que se han registrado en la plataforma.
+- Un usuario tipo *estándar* solo podrá acceder y ver su información personal.
+
 ## Requisitos
 Las especficaciones del desarrollo de esta aplicación web, la parte del frontend debe estar completamente desarrollado mediante Next.JS y su ecosistemas de paquete; en la parte del backend se deberá de hacerse bajo el mismo framework, recalcar que la DB a utilizar puede ser cualquiera pero se debe especificar cual ha sido usada, como es desplegada en caso de necesitar pasos y facilitar un seeder de datos indicando como es este ejecutado.
 
@@ -17,7 +21,7 @@ Las especificaciones que deben desarrollarse son las siguientes.
 - Sistema de autenticación basado en token a expirar en 7d, debe integrarse mediante NextAuth
 - Dos tipos de roles de usuario: admin y user
 - Rutas protegidas en base al rol en el front y back
-- Admin: Podrá visualizar su perfil
+- Admin: Podrá visualizar su perfil + listado de usuarios que se hayan registrado.
 - User: Podrá visualizar su perfil
 - No autenticado: Deben ser redirigidos a la pantalla de login cuando intentan acceder a rutas protegidas.
 
