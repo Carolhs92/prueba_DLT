@@ -36,7 +36,5 @@ Otros aspectos se valorarán de manera positiva como:
 Con la finalidad de hacer la prueba técnica, deberás de hacer un fork del repositorio.
 
 ## Diseño
-Se ha generado una carpeta por cada sección que hemos desarrollado para la prueba técnica:
-- Auth: pantallas de inicio de sesión y registro
-- Users: Pantalla de admin, usuario.
-- Colors: colores corporativos de la empresa
+Se ha generado una carpeta de assets donde internamente estarán las pantallas a diseñar y desarrollar.
+
