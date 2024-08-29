@@ -1,21 +1,13 @@
-# PRUEBA_TECNICA_GESTION_PRODUCTOS
-Prueba técnica gestión de productos Nextjs+NextAuth+API+NestJS
+# PRUEBA_TECNICA_AUTENTICACIÓN
+Prueba técnica de autenticación Nextjs+NextAuth+API+NestJS
 
-## Prueba técnica: Aplicación de gestión de productos
+## Prueba técnica: Aplicación de autenticación
 Objetivo
-Crear una aplicación web que permita a los usuarios autenticados la gestión de un listado de productos relacionados al negocio.
+Crear una aplicación que permita a los usuarios loguearse.
 
-El usuario debe poder realizar las siguientes acciones dentro de la aplicación web: 
-- Autenticarse
-- Visualizar los productos del sistema
-- Filtrar los productos del sistema
-- Visualizar los detalles de un producto seleccionado
-
-Además del usuario de negocio, existe un segundo tipo de usuario denominado, administrador, que debe poder acceder a una ruta protegida únicamente para este rol que le permita visualizar y gestionar los usuarios del sistema, eso incluye: 
-- Visualizar todos los usuarios del sistema
-- Desactivar un usuario del sistema 
-- Registrar un nuevo producto 
-- Borrar un producto
+El usuario debe poder realizar las siguientes acciones dentro de la aplicación web:
+- Iniciar sesión
+- Registrarse
 
 ## Requisitos
 Las especficaciones del desarrollo de esta aplicación web, la parte del frontend debe estar completamente desarrollado mediante Next.JS y su ecosistemas de paquete; en la parte del backend se deberá de hacerse bajo el mismo framework, recalcar que la DB a utilizar puede ser cualquiera pero se debe especificar cual ha sido usada, como es desplegada en caso de necesitar pasos y facilitar un seeder de datos indicando como es este ejecutado.
@@ -25,8 +17,8 @@ Las especificaciones que deben desarrollarse son las siguientes.
 - Sistema de autenticación basado en token a expirar en 7d, debe integrarse mediante NextAuth
 - Dos tipos de roles de usuario: admin y user
 - Rutas protegidas en base al rol en el front y back
-- Admin: Podrá acceder a un panel de administración donde se muestra una lista de usuarios registrados, así como los productos adquiridos.
-- User: Podrá acceder a la lista de productos y ver detalles de un producto.
+- Admin: Podrá visualizar su perfil
+- User: Podrá visualizar su perfil
 - No autenticado: Deben ser redirigidos a la pantalla de login cuando intentan acceder a rutas protegidas.
 
 Otros aspectos se valorarán de manera positiva como:
@@ -41,7 +33,6 @@ Con la finalidad de hacer la prueba técnica, deberás de hacer un fork del repo
 
 ## Diseño
 Se ha generado una carpeta por cada sección que hemos desarrollado para la prueba técnica:
-- Auth: pantallas de registro e iniciar sesión
-- User: pantallas que tendrá acceso al usuario
-- Admin: pantallas que tendrá acceso el adminsitrador
+- Auth: pantallas de inicio de sesión y registro
+- Users: Pantalla de admin, usuario.
 - Colors: colores corporativos de la empresa
