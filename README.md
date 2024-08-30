@@ -1,5 +1,5 @@
 # PRUEBA_TECNICA_AUTENTICACIÓN
-Prueba técnica de autenticación Nextjs+NextAuth+API+NestJS
+Prueba técnica de autenticación Nextjs+NextAuth
 
 ## Prueba técnica: Aplicación de autenticación
 Objetivo
