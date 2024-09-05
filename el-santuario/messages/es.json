@@ -52,12 +52,17 @@
     "vampiro":"Vampiro",
     "unicornio":"Unicornio"
   }, "Perfil": {
-      "titulo": "Mi perfil",
-      "descripcion": "Este es el lugardonde podrás gestionar, actualizar y personalizar la información de tu perfil.",
-      "nombre": "Nombre Mágico",
-      "email": "Correo Mágico",
-      "rol": "Rol",
-      "descripcion2": "Descripción",
-      "descripcion_personaje":"Soy un guardián del bosque y protector de criaturas mágicas. Soy un tanto excéntrico. dedico mi vida a cuidar de una vasta variedad de seres fantástico, desde majestuuosos dragones hasta diminutas hadas. Poseo un vasto conocimiento de las artes curativas y la magia antigua, lo que me permite sanar y proteger a las criaturas que encuentro en sus viajes."
+    "titulo": "Mi perfil",
+    "descripcion": "Este es el lugar donde podrás gestionar, actualizar y personalizar la información de tu perfil.",
+    "nombre": "Nombre Mágico",
+    "email": "Correo Mágico",
+    "rol": "Rol",
+    "descripcion2": "Descripción",
+    "descripcion_personaje": "Soy un guardián del bosque y protector de criaturas mágicas. Soy un tanto excéntrico. dedico mi vida a cuidar de una vasta variedad de seres fantástico, desde majestuuosos dragones hasta diminutas hadas. Poseo un vasto conocimiento de las artes curativas y la magia antigua, lo que me permite sanar y proteger a las criaturas que encuentro en sus viajes.",
+    "fenix": "Fénix",
+    "dragon": "Dragón",
+    "golem": "Golem",
+    "vampiro": "Vampiro",
+    "unicornio": "Unicornio"
   }
 }

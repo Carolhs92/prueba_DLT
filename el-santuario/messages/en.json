@@ -58,6 +58,11 @@
     "email": "Magic Email",
     "rol": "Role",
     "descripcion2": "Description",
-    "descripcion_personaje": "I am a guardian of the forest and protector of magical creatures. I am somewhat eccentric. I dedicate my life to caring for a vast variety of fantastic beings, from majestic dragons to tiny fairies. I possess a vast knowledge of healing arts and ancient magic, which allows me to heal and protect the creatures I encounter on my journeys."
+    "descripcion_personaje": "I am a guardian of the forest and protector of magical creatures. I am somewhat eccentric. I dedicate my life to caring for a vast variety of fantastic beings, from majestic dragons to tiny fairies. I possess a vast knowledge of healing arts and ancient magic, which allows me to heal and protect the creatures I encounter on my journeys.",
+    "dragon": "Dragon",
+    "fenix": "Phoenix",
+    "golem": "Golem",
+    "vampiro": "Vampire",
+    "unicornio": "Unicorn"
   }
 }

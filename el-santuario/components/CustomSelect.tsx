@@ -14,20 +14,23 @@ interface CustomSelectProps {
   disabled?: boolean;
 }
 
-const CustomSelect: React.FC<CustomSelectProps> = ({ options, value, onChange }) => {
+const CustomSelect: React.FC<CustomSelectProps> = ({ options, value, onChange, disabled }) => {
   const [isOpen, setIsOpen] = useState(false);
   const selectRef = useRef<HTMLDivElement>(null);
 
   const handleSelectClick = () => {
-    setIsOpen(!isOpen);
+    if (!disabled) {
+      setIsOpen(!isOpen);
+    }
   };
 
   const handleOptionClick = (value: string) => {
-    onChange(value);
-    setIsOpen(false);
+    if (!disabled) {
+      onChange(value);
+      setIsOpen(false);
+    }
   };
 
-  //  clics fuera del componente
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (selectRef.current && !selectRef.current.contains(event.target as Node)) {
@@ -44,8 +47,11 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, value, onChange })
   const selectedOption = options.find(option => option.value === value);
 
   return (
-    <div className="custom-select" ref={selectRef}>
-      <div className="custom-select__input" onClick={handleSelectClick}>
+    <div className={`custom-select ${disabled ? 'disabled' : ''}`} ref={selectRef}>
+      <div
+        className={`custom-select__input ${disabled ? 'custom-select__input--disabled' : ''}`}
+        onClick={handleSelectClick}
+      >
         {selectedOption ? selectedOption.label : 'Select an option'}
         <Image
           src="/icons/arrow_down.png"
@@ -55,7 +61,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, value, onChange })
           className="custom-select__icon"
         />
       </div>
-      {isOpen && (
+      {isOpen && !disabled && (
         <ul className="custom-select__options">
           {options.map(option => (
             <li

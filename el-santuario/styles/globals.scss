@@ -80,18 +80,15 @@ button {
   flex-direction: column; 
 }
 
-// .select {
-//   width: 400px;
-//   display: flex;
-//   flex-direction: column; 
-// }
-
-
 .custom-select {
   position: relative;
   display: inline-block;
-  // width: 400px;
   cursor: pointer;
+
+  &.disabled {
+    cursor: pointer;
+    pointer-events: none;
+  }
 
   &__input {
     display: flex;
