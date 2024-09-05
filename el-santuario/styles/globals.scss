@@ -40,6 +40,7 @@ label {
   color: $primary-color;
 }
 
+textarea,
 input,
 select,
 option {
@@ -49,6 +50,7 @@ option {
   border: none;
   border-radius: 10px;
   background-color: #eeeded;
+  resize: none;
 }
 
 fieldset {
@@ -72,11 +74,17 @@ button {
     box-shadow: #666 0 0 5px;
   }
 }
-.select {
-  width: 400px;
+.textarea{
+  width: 600px;
   display: flex;
   flex-direction: column; 
 }
+
+// .select {
+//   width: 400px;
+//   display: flex;
+//   flex-direction: column; 
+// }
 
 
 .custom-select {

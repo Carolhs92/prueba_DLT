@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import CustomSelect from '@/components/CustomSelect'; 
-import style from '@/styles/criaturas.module.scss';
+import style from '@/styles/perfil.module.scss';
 
 const PerfilPage = () => {
   const t = useTranslations('Perfil');
@@ -64,7 +64,7 @@ const PerfilPage = () => {
               disabled
             />
           </div>
-          <div className={style['perfil-page__input-container']}>
+          <div className={style['select'] }>
             <label htmlFor="rol" className={style['perfil-page__label']}>
               {t('rol')}
             </label>
@@ -75,17 +75,17 @@ const PerfilPage = () => {
               disabled 
             />
           </div>
-          <div className={style['perfil-page__input-container']}>
+          <div className={ `style['perfil-page__input-container'] textarea`}>
             <label htmlFor="descripcion2" className={style['perfil-page__label']}>
               {t('descripcion2')}
             </label>
-            <input
+            <textarea
               id="descripcion2"
               name="descripcion2"
-              className={style['perfil-page__input']}
-              type="text"
+              className={style['perfil-page__textarea']}
               placeholder={t('descripcion_personaje')}
               disabled
+              rows={5}
             />
           </div>
         </form>

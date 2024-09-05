@@ -26,7 +26,7 @@ const CriaturasPage = () => {
         <h3 className={style['criaturas-page__title']}>{t('titulo')}</h3>
         <p className={style['criaturas-page__about']}>{t('descripcion')}</p>
         <h3 className={style['criaturas-page__title2']}>{t('titulo2')}</h3>
-        <form className={style['criaturas-page__form']}>
+        <form className={style['criaturas-page__form']} id="crear-criatura">
           <div className={style['criaturas-page__input-container']}>
             <label htmlFor="nombre" className={style['criaturas-page__label']}>
               {t('nombre')}
@@ -39,7 +39,7 @@ const CriaturasPage = () => {
               placeholder={t('holder_nombre')}
             />
           </div>
-          <div className={`style['criaturas-page__input-container'] select`}>
+          <div className={style['select']}>
             <label htmlFor="tipo" className={style['criaturas-page__label']}>
               {t('tipo')}
             </label>
@@ -88,8 +88,11 @@ const CriaturasPage = () => {
               </div>
             </fieldset>
           </div>
-          <button className={style['criaturas-page__button']}>{t('registrar')}</button>
         </form>
+        <div className={style['criaturas-page__button-container']}>
+          <button className={style['criaturas-page__button']} type="submit" form="miFormulario">{t('registrar')}</button>
+        </div>
+        
       </div>
     </main>
   );

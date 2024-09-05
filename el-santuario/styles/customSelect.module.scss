@@ -17,8 +17,12 @@ $icon-size: 20px;
     width: 100%;
     font-family: 'Nunito';
     font-size: 14px;
-    color: $dark-color;
+    color: #000;
     box-sizing: border-box;
+    &:disabled {
+      background-color: #f0f0f0; 
+      cursor: not-allowed; 
+    }
   }
 
   &__icon {
@@ -49,7 +53,7 @@ $icon-size: 20px;
     cursor: pointer;
     font-family: 'Nunito';
     font-size: 14px;
-    color: $dark-color;
+    color: #000;
 
     &:hover {
       background-color: #f0f0f0;

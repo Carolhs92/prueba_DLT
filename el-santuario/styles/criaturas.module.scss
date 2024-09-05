@@ -41,8 +41,14 @@
             align-items: flex-start;
         }
     }
+    &__button-container{
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
     &__button{
-        width: 200px;
+      align-items: center;
+      width: 200px;
     }
 
     &__checkbox-group {
@@ -92,3 +98,11 @@
     }
 
 }
+
+
+.select {
+  width: 400px;
+  display: flex;
+  flex-direction: column; 
+}
+
