@@ -1,0 +1,48 @@
+.perfil-page {
+    flex: 1;
+    // margin-left: 18%;
+    padding: 20px;
+    // height: 100vh;
+    // margin-top: -700px;
+    // position: absolute;
+    // z-index: 3;
+    &__content{
+        &__about {
+            font-family: 'Times New Roman';
+            color: #898989;
+            margin-bottom: 20px;
+        }
+    }
+
+    
+
+    &__title2 {
+        text-align: center;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: row;
+        max-width: 830px;
+        gap: 20px;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: center;
+
+        &__input-container {
+            width: 400px;
+            display: flex;  
+            flex-direction: column; 
+            align-items: flex-start; 
+        }
+
+        input:not([type="radio"]),
+        select {
+            display: flex;
+            width: 400px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+}

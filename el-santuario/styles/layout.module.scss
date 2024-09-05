@@ -1,0 +1,28 @@
+.layout-page{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    &__sidebar{
+        margin-top: 0;
+        margin-left: 0;
+        width: 18%;
+        // height: 100vh;
+        position: relative;
+        height:revert-layer;
+        
+    }
+    &__nav{
+        width: calc(82% - 0px);
+        height: 150px;
+        margin-top: 0;
+        margin-left: auto;
+    }
+    &__children{
+        padding-left: 20%;
+        margin-top: 0;
+        position: absolute;
+        margin-top: 150px;
+    }
+}

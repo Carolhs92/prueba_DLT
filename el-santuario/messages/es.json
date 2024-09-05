@@ -1,0 +1,63 @@
+{
+  "login": {
+    "title": "Inicia sesión",
+    "about": "Para acceder a la colección de criaturas mágicas. Sólo los maestros y los cuidadores reconocidos puedes entrar.",
+    "email": "Correo mágico",
+    "holder_email":"tunombre@santuario.com",
+    "password": "Palabra mágica",
+    "holder_password":"Introduece tu contraseña",
+    "enter": "Acceder al santuario",
+    "register": "¿No tienes cuenta? Regístrate como maestro o cuidador.",
+    "Picture": "La imagen del animal mágico"
+  }, "register": {
+    "title": "Únete al santuario",
+    "about": "Elige si serás un cuidador o un maestro de criaturas. Completa los detalles para comenzar.",
+    "nombre": "Nombre mágico",
+    "holder_nombre":"Introduce tu nombre mágico",
+    "email": "Correo mágico",
+    "holder_email":"tunombre@santuario.com",
+    "rol":"Rol",
+    "cuidador":"Cuidador",
+    "maestro":"Maestro",
+    "password": "Palabra mágica",
+    "holder_password":"Introduece tu contraseña",
+    "enter": "Registrarme en el santuario",
+    "login": "¿Tienes cuenta? Inicia sesión en el refugio.",
+    "Picture": "La imagen del animal mágico"
+  }, "Navigation": {
+      "titulo": "El Santuario",
+      "criaturas": "Mis criaturas",
+      "perfil": "Mi perfil",
+      "sesion": "Cerrar sesión"
+  },"perfiles": {
+      "title": "Página de Perfiles",
+      "description": "Descripción de la página de perfiles."
+  }, "Criaturas": {
+    "titulo": "Mis Criaturas",
+    "descripcion": "Explora y gestiona todas las criaturas mágicas que has recolectado. Cada una tiene habilidades únicas y características especiales.",
+    "titulo2": "Creador de criaturas mágicas",
+    "nombre": "Nombre mágico de la criatura",
+    "holder_nombre":"Introduece el nombre de la criatura",
+    "tipo":"Tipo de criatura",
+    "holder_tipo":"Fénix",
+    "poder": "Nivel de poder",
+    "holder_poder":"1",
+    "entrenamiento":"¿Entrenada?",
+    "si":"Sí",
+    "no":"No",
+    "registrar":"Registrar criatura",
+    "dragon":"Dragón",
+    "fenix":"Fénix",
+    "golem":"Golem",
+    "vampiro":"Vampiro",
+    "unicornio":"Unicornio"
+  }, "Perfil": {
+      "titulo": "Mi perfil",
+      "descripcion": "Este es el lugardonde podrás gestionar, actualizar y personalizar la información de tu perfil.",
+      "nombre": "Nombre Mágico",
+      "email": "Correo Mágico",
+      "rol": "Rol",
+      "descripcion2": "Descripción",
+      "descripcion_personaje":"Soy un guardián del bosque y protector de criaturas mágicas. Soy un tanto excéntrico. dedico mi vida a cuidar de una vasta variedad de seres fantástico, desde majestuuosos dragones hasta diminutas hadas. Poseo un vasto conocimiento de las artes curativas y la magia antigua, lo que me permite sanar y proteger a las criaturas que encuentro en sus viajes."
+  }
+}
