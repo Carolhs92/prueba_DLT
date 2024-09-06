@@ -9,8 +9,8 @@ export function Navigation() {
   const pathname = usePathname();
 
   const links = [
-    { label: t('criaturas'), href: { pathname: '/perfiles/criaturas' } },
-    { label: t('perfil'), href: { pathname: '/perfiles/perfil' } },
+    { label: t('criaturas'), href: { pathname: '/cuidador/criaturas' } },
+    { label: t('perfil'), href: { pathname: '/cuidador/perfil' } },
     { label: t('sesion'), href: { pathname: '#' } }, 
   ];
 

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import CustomSelect from '@/components/CustomSelect'; 
 import style from '@/styles/criaturas.module.scss';
+// import MaestroLayout from '@/layouts/cuidadorLayout/MaestroLayout';
 
 const CriaturasPage = () => {
   const t = useTranslations('Criaturas');
@@ -21,11 +22,11 @@ const CriaturasPage = () => {
   ];
 
   return (
+//   <MaestroLayout>
     <main className={style['criaturas-page']}>
       <div className={style['criaturas-page__content']}>
         <h3 className={style['criaturas-page__title']}>{t('titulo')}</h3>
         <p className={style['criaturas-page__about']}>{t('descripcion')}</p>
-        <h3 className={style['criaturas-page__title2']}>{t('titulo2')}</h3>
         <form className={style['criaturas-page__form']} id="crear-criatura">
           <div className={style['criaturas-page__input-container']}>
             <label htmlFor="nombre" className={style['criaturas-page__label']}>
@@ -89,12 +90,14 @@ const CriaturasPage = () => {
             </fieldset>
           </div>
         </form>
+        <h3 className={style['criaturas-page__title2']}>{t('titulo2')}</h3>
         <div className={style['criaturas-page__button-container']}>
           <button className={style['criaturas-page__button']} type="submit" form="miFormulario">{t('registrar')}</button>
         </div>
         
       </div>
     </main>
+    // </MaestroLayout>
   );
 };
 

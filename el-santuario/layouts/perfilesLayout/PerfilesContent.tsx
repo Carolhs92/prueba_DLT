@@ -3,7 +3,7 @@ import { Navigation } from '@/components/Navigation';
 import { SidebarImage } from '@/components/SidebarImage';
 import { useRole } from '@/contexts/RoleContext';
 
-export function PerfilesContent({ children }: { children: React.ReactNode }) {
+export function cuidadorContent({ children }: { children: React.ReactNode }) {
   const { role } = useRole();
   const imageSrc = role === 'cuidador' ? '/assets/caretaker.png' : '/assets/master.png';
 

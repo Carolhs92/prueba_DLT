@@ -29,28 +29,38 @@
     "criaturas": "My Creatures",
     "perfil": "My Profile",
     "sesion": "Log Out"
-  }, "perfiles": {
+  }, "cuidador": {
     "title": "Profiles Page",
     "description": "Description of the profiles page."
-  }, "Creatures": {
+  }, "Criaturas": {
     "title": "My Creatures",
-    "description": "Explore and manage all the magical creatures you have collected. Each one has unique abilities and special characteristics.",
+    "descripcion": "Explore and manage all the magical creatures you have collected. Each one has unique abilities and special characteristics.",
     "title2": "Magical Creature Creator",
-    "name": "Magical Creature Name",
-    "holder_name": "Enter the creature's name",
-    "type": "Creature Type",
-    "holder_type": "Phoenix",
-    "power": "Power Level",
+    "nombre": "Magical Creature Name",
+    "holder_nombre2": "Name",
+    "holder_nombre": "Enter the creature's name",
+    "tipos": "Creature Type",
+    "tipo2":"Type",
+    "holder_tipo": "Phoenix",
+    "poder": "Power Level",
+    "nivel":"Level",
     "holder_poder": "1",
-    "training": "Trained?",
-    "yes": "Yes",
+    "entrenamiento": "Trained?",
+    "entrenado":"Trained",
+    "acciones":"Actions",
+    "si": "Yes",
     "no": "No",
-    "register": "Register Creature",
+    "registrar": "Register Creature",
     "dragon": "Dragon",
     "fenix": "Phoenix",
     "golem": "Golem",
     "vampiro": "Vampire",
-    "unicornio": "Unicorn"
+    "unicornio": "Unicorn",
+    "crear_criatura": "Add new creature",
+    "filtro": "Filter",
+    "filtrar": "confirm",
+    "buscar": "Search by type",
+    "palabra": "Magic Word"
   }, "Perfil": {
     "titulo": "My Profile",
     "descripcion": "This is the place where you can manage, update, and personalize your profile information.",
@@ -59,10 +69,13 @@
     "rol": "Role",
     "descripcion2": "Description",
     "descripcion_personaje": "I am a guardian of the forest and protector of magical creatures. I am somewhat eccentric. I dedicate my life to caring for a vast variety of fantastic beings, from majestic dragons to tiny fairies. I possess a vast knowledge of healing arts and ancient magic, which allows me to heal and protect the creatures I encounter on my journeys.",
+    "descripcion_personaje2": "I am Jaime the Brave, master in the arts of summoning and controlling creatures. In my games, each creature has a story, a purpose, and a crucial role in epic adventures. From towering dragons to mysterious creatures of the forests.",
     "dragon": "Dragon",
     "fenix": "Phoenix",
     "golem": "Golem",
     "vampiro": "Vampire",
-    "unicornio": "Unicorn"
+    "unicornio": "Unicorn",
+    "holder_tipo": "Type of profile",
+    "falta": "falta"
   }
 }

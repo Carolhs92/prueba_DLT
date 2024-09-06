@@ -29,20 +29,25 @@
       "criaturas": "Mis criaturas",
       "perfil": "Mi perfil",
       "sesion": "Cerrar sesión"
-  },"perfiles": {
-      "title": "Página de Perfiles",
-      "description": "Descripción de la página de perfiles."
+  },"cuidador": {
+      "title": "Página de cuidador",
+      "description": "Descripción de la página de cuidador."
   }, "Criaturas": {
     "titulo": "Mis Criaturas",
     "descripcion": "Explora y gestiona todas las criaturas mágicas que has recolectado. Cada una tiene habilidades únicas y características especiales.",
     "titulo2": "Creador de criaturas mágicas",
     "nombre": "Nombre mágico de la criatura",
+    "holder_nombre2": "Nombre",
     "holder_nombre":"Introduece el nombre de la criatura",
     "tipo":"Tipo de criatura",
+    "tipo2":"Tipo",
     "holder_tipo":"Fénix",
     "poder": "Nivel de poder",
+    "nivel":"Nivel",
     "holder_poder":"1",
     "entrenamiento":"¿Entrenada?",
+    "entrenado":"Entrenado",
+    "acciones":"Acciones",
     "si":"Sí",
     "no":"No",
     "registrar":"Registrar criatura",
@@ -50,7 +55,12 @@
     "fenix":"Fénix",
     "golem":"Golem",
     "vampiro":"Vampiro",
-    "unicornio":"Unicornio"
+    "unicornio":"Unicornio",
+    "crear_criatura": "Añadir nueva criatura",
+    "filtro": "Filtrar",
+    "filtrar":"Confirmar",
+    "buscar":"Buscar por tipo",
+    "palabra": "Palabra mágica"
   }, "Perfil": {
     "titulo": "Mi perfil",
     "descripcion": "Este es el lugar donde podrás gestionar, actualizar y personalizar la información de tu perfil.",
@@ -58,11 +68,15 @@
     "email": "Correo Mágico",
     "rol": "Rol",
     "descripcion2": "Descripción",
-    "descripcion_personaje": "Soy un guardián del bosque y protector de criaturas mágicas. Soy un tanto excéntrico. dedico mi vida a cuidar de una vasta variedad de seres fantástico, desde majestuuosos dragones hasta diminutas hadas. Poseo un vasto conocimiento de las artes curativas y la magia antigua, lo que me permite sanar y proteger a las criaturas que encuentro en sus viajes.",
+    "descripcion_personaje": "Soy un guardián del bosque y protector de criaturas mágicas. Soy un tanto excéntrico. dedico mi vida a cuidar de una vasta variedad de seres fantástico, desde majestuosos dragones hasta diminutas hadas. Poseo un vasto conocimiento de las artes curativas y la magia antigua, lo que me permite sanar y proteger a las criaturas que encuentro en sus viajes.",
+    "descripcion_personaje2":"Soy Jaime el Valiente, maestro en las artes de invocar y dominar criaturas. En mis partidas, cada criatura tiene una historia, un propósito, y un papel crucial en las épicas aventuras. Desde dragones imponentes hasta criaturas misteriosas de los bosques.",
     "fenix": "Fénix",
     "dragon": "Dragón",
     "golem": "Golem",
     "vampiro": "Vampiro",
-    "unicornio": "Unicornio"
+    "unicornio": "Unicornio",
+    "holder_tipo": "Tipo de perfil",
+    "falta": "falta"
   }
+  
 }
