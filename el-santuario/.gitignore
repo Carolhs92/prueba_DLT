@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+# credenciales
+el-santuario/el-santuario-7542a-firebase-adminsdk-jb49w-b88bcde298.json

@@ -1,11 +1,6 @@
 .perfil-page {
     flex: 1;
-    // margin-left: 18%;
     padding: 20px;
-    // height: 100vh;
-    // margin-top: -700px;
-    // position: absolute;
-    // z-index: 3;
 
     &__about {
         font-family: 'Times New Roman';
@@ -41,7 +36,32 @@
 }
 .textarea,
 .select{
-    display: flex !important;
-    flex-direction: column !important;
-    width: 600px !important;
+    display: flex ;
+    flex-direction: column ;
+    width: 600px ;
+}
+
+
+//* Media Queries para hacer el ancho 100% en pantallas pequeñas */
+
+/* Para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+    .perfil-page__form,
+    .perfil-page__input-container,
+    .perfil-page__input-container input,
+    .textarea,
+    .select {
+      width: 100%; /* Ajuste a 100% */
+    }
+}
+
+  /* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .perfil-page__form,
+    .perfil-page__input-container,
+    .perfil-page__input-container input,
+    .textarea,
+    .select {
+      width: 100%; /* Ajuste a 100% */
+    }
 }

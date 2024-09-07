@@ -1,6 +1,8 @@
 import { ReactNode } from 'react';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
+import { SidebarImage } from '@/components/SidebarImage'; 
+import { Navigation } from '@/components/Navigation'; 
 
 interface Props {
   children: ReactNode;
@@ -19,7 +21,9 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
     <html lang={locale}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
+          {/* <SidebarImage />
+          <Navigation /> */}
+          <main>{children}</main>
         </NextIntlClientProvider>
       </body>
     </html>

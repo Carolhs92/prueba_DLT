@@ -1,28 +1,31 @@
-import React, { createContext, useState, useContext } from 'react';
+"use client"; 
+
+import React, { createContext, useContext, useState } from 'react';
 
 type Role = 'cuidador' | 'maestro';
 
-interface RoleContextType {
+interface RoleContextProps {
   role: Role;
-  setRole: React.Dispatch<React.SetStateAction<Role>>;
+  setRole: (role: Role) => void;
 }
 
-const RoleContext = createContext<RoleContextType | undefined>(undefined);
+const RoleContext = createContext<RoleContextProps | undefined>(undefined);
 
-export function useRole() {
-  const context = useContext(RoleContext);
-  if (context === undefined) {
-    throw new Error('useRole must be used within a RoleProvider');
-  }
-  return context;
-}
+export const RoleProvider = ({ children }: { children: React.ReactNode }) => {
 
-export function RoleProvider({ children }: { children: React.ReactNode }) {
   const [role, setRole] = useState<Role>('cuidador');
-  
+
   return (
     <RoleContext.Provider value={{ role, setRole }}>
       {children}
     </RoleContext.Provider>
   );
-}
+};
+
+export const useRole = () => {
+  const context = useContext(RoleContext);
+  if (!context) {
+    throw new Error('useRole debe ser usado dentro de un RoleProvider');
+  }
+  return context;
+};

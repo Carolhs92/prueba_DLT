@@ -23,7 +23,8 @@
     "holder_password": "Enter your password",
     "enter": "Register at the Sanctuary",
     "login": "Already have an account? Log in to the refuge.",
-    "Picture": "Picture of the magical animal"
+    "Picture": "Picture of the magical animal",
+    "cargando":"Loading..."
   }, "Navigation": {
     "titulo": "The Sanctuary",
     "criaturas": "My Creatures",

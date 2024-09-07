@@ -6,7 +6,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
   return (
     <div className={style['layout-page']}>
       <div className={style['layout-page__sidebar']}>
-        <SidebarImage role="cuidador"/>  
+        <SidebarImage src="/assets/caretaker.png" />  
       </div>
       <div className={style['layout-page__nav']}>
         <Navigation />

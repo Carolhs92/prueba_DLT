@@ -12,7 +12,7 @@ const PerfilPage = () => {
   const [selectedType, setSelectedType] = useState('fenix');
 
   useEffect(() => {
-    // Supongamos que estamos obteniendo el tipo guardado en el registro desde localStorage
+    // obteniendo el tipo guardado en el registro desde localStorage
     const savedType = localStorage.getItem('selectedType');
     if (savedType) {
       setSelectedType(savedType);

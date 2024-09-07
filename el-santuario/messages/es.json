@@ -23,7 +23,8 @@
     "holder_password":"Introduece tu contraseña",
     "enter": "Registrarme en el santuario",
     "login": "¿Tienes cuenta? Inicia sesión en el refugio.",
-    "Picture": "La imagen del animal mágico"
+    "Picture": "La imagen del animal mágico",
+    "cargando":"Cargando..."
   }, "Navigation": {
       "titulo": "El Santuario",
       "criaturas": "Mis criaturas",

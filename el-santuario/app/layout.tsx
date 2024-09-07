@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 function App({children,}: {children: React.ReactNode;}) {
 
   return (
-    <html lang="es">
+    <html lang="en">
       <body className={inter.className}>
         {children}
       </body>

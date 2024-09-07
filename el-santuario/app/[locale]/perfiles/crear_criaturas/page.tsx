@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import CustomSelect from '@/components/CustomSelect'; 
 import style from '@/styles/criaturas.module.scss';
-// import RoleBasedLayout from '@/layouts/cuidadorLayout/RoleBasedLayout';
+import { useRouter } from 'next/navigation'; // No lo necesitamos aquí ya que usas `window.location.href`
 
 const CriaturasPage = () => {
   const t = useTranslations('Criaturas');
@@ -29,82 +29,91 @@ const CriaturasPage = () => {
     { value: 'unicornio', label: t('unicornio') },
   ];
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Aquí puedes manejar la lógica de envío del formulario (por ejemplo, llamar a una API)
+
+    window.location.href = '/perfiles/criaturas';
+  };
+
   return (
-    // <RoleBasedLayout role={role}>
-      <main className={style['criaturas-page']}>
-        <div className={style['criaturas-page__content']}>
-          <h3 className={style['criaturas-page__title']}>{t('titulo')}</h3>
-          <p className={style['criaturas-page__about']}>{t('descripcion')}</p>
-          <h3 className={style['criaturas-page__title2']}>{t('titulo2')}</h3>
-          <form className={style['criaturas-page__form']} id="crear-criatura">
-            <div className={style['criaturas-page__input-container']}>
-              <label htmlFor="nombre" className={style['criaturas-page__label']}>
-                {t('nombre')}
-              </label>
-              <input
-                id="nombre"
-                name="nombre"
-                className={style['criaturas-page__input']}
-                type="text"
-                placeholder={t('holder_nombre')}
-              />
-            </div>
-            <div className={style['select']}>
-              <label htmlFor="tipo" className={style['criaturas-page__label']}>
-                {t('tipo')}
-              </label>
-              <CustomSelect 
-                value={selectedType} 
-                onChange={handleTypeChange} 
-                options={options}
-              />
-            </div>
-            <div className={style['criaturas-page__input-container']}>
-              <label htmlFor="poder" className={style['criaturas-page__label']}>
-                {t('poder')}
-              </label>
-              <input
-                id="poder"
-                name="poder"
-                className={style['criaturas-page__input']}
-                type="number"
-                placeholder={t('holder_poder')}
-              />
-            </div>
-            <div className={style['criaturas-page__input-container']}>
-              <fieldset className={style['criaturas-page__fieldset']}>
-                <legend className={style['criaturas-page__label']}>{t('entrenamiento')}</legend>
-                <div className={style['criaturas-page__checkbox-group']}>
-                  <label htmlFor="entrenamiento-si" className={style['criaturas-page__checkbox-label']}>
-                    <input
-                      type="radio"
-                      id="entrenamiento-si"
-                      name="entrenamiento"
-                      value="si"
-                      className={style['criaturas-page__checkbox']}
-                    />
-                    {t('si')}
-                  </label>
-                  <label htmlFor="entrenamiento-no" className={style['criaturas-page__checkbox-label']}>
-                    <input
-                      type="radio"
-                      id="entrenamiento-no"
-                      name="entrenamiento"
-                      value="no"
-                      className={style['criaturas-page__checkbox']}
-                    />
-                    {t('no')}
-                  </label>
-                </div>
-              </fieldset>
-            </div>
-          </form>
-          <div className={style['criaturas-page__button-container']}>
-            <button className={style['criaturas-page__button']} type="submit" form="miFormulario">{t('registrar')}</button>
+    <main className={style['criaturas-page']}>
+      <div className={style['criaturas-page__content']}>
+        <h3 className={style['criaturas-page__title']}>{t('titulo')}</h3>
+        <p className={style['criaturas-page__about']}>{t('descripcion')}</p>
+        <h3 className={style['criaturas-page__title2']}>{t('titulo2')}</h3>
+        <form 
+          className={style['criaturas-page__form']} 
+          id="crear-criatura"
+          onSubmit={handleSubmit}
+        >
+          <div className={style['criaturas-page__input-container']}>
+            <label htmlFor="nombre" className={style['criaturas-page__label']}>
+              {t('nombre')}
+            </label>
+            <input
+              id="nombre"
+              name="nombre"
+              className={style['criaturas-page__input']}
+              type="text"
+              placeholder={t('holder_nombre')}
+            />
           </div>
+          <div className={style['select']}>
+            <label htmlFor="tipo" className={style['criaturas-page__label']}>
+              {t('tipo')}
+            </label>
+            <CustomSelect 
+              value={selectedType} 
+              onChange={handleTypeChange} 
+              options={options}
+            />
+          </div>
+          <div className={style['criaturas-page__input-container']}>
+            <label htmlFor="poder" className={style['criaturas-page__label']}>
+              {t('poder')}
+            </label>
+            <input
+              id="poder"
+              name="poder"
+              className={style['criaturas-page__input']}
+              type="number"
+              placeholder={t('holder_poder')}
+            />
+          </div>
+          <div className={style['criaturas-page__input-container']}>
+            <fieldset className={style['criaturas-page__fieldset']}>
+              <legend className={style['criaturas-page__label']}>{t('entrenamiento')}</legend>
+              <div className={style['criaturas-page__checkbox-group']}>
+                <label htmlFor="entrenamiento-si" className={style['criaturas-page__checkbox-label']}>
+                  <input
+                    type="radio"
+                    id="entrenamiento-si"
+                    name="entrenamiento"
+                    value="si"
+                    className={style['criaturas-page__checkbox']}
+                  />
+                  {t('si')}
+                </label>
+                <label htmlFor="entrenamiento-no" className={style['criaturas-page__checkbox-label']}>
+                  <input
+                    type="radio"
+                    id="entrenamiento-no"
+                    name="entrenamiento"
+                    value="no"
+                    className={style['criaturas-page__checkbox']}
+                  />
+                  {t('no')}
+                </label>
+              </div>
+            </fieldset>
+          </div>
+        </form>
+        <div className={style['criaturas-page__button-container']}>
+          <button className={style['criaturas-page__button']} type="submit" form="crear-criatura">{t('registrar')}</button>
         </div>
-      </main>
-    // </RoleBasedLayout>
+      </div>
+    </main>
   );
 };
 

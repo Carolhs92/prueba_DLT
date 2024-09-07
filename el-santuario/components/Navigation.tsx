@@ -1,17 +1,18 @@
 "use client";
+
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import style from '@/styles/nav.module.scss';
 import { useTranslations } from 'next-intl';
+import style from '@/styles/nav.module.scss';
 
 export function Navigation() {
   const t = useTranslations('Navigation');
   const pathname = usePathname();
 
   const links = [
-    { label: t('criaturas'), href: { pathname: '/cuidador/criaturas' } },
-    { label: t('perfil'), href: { pathname: '/cuidador/perfil' } },
-    { label: t('sesion'), href: { pathname: '#' } }, 
+    { label: t('criaturas'), href: { pathname: '/perfiles/criaturas' } },
+    { label: t('perfil'), href: { pathname: '/perfiles/perfil' } },
+    { label: t('sesion'), href: { pathname: '#' } },                      
   ];
 
   return (
@@ -21,10 +22,7 @@ export function Navigation() {
         <ul className={style['navigation__nav__ul']}>
           {links.map(({ label, href }) => (
             <li key={href.pathname} className={style['navigation__nav__li']}>
-              <Link 
-                href={href} 
-                className={`${style['navigation__link']} ${pathname.includes(href.pathname) ? style['navigation__link--active'] : ''}`} 
-              >
+              <Link href={href} className={`${style['navigation__link']} ${pathname === href.pathname ? style['navigation__link--active'] : ''}`}>
                 {label}
               </Link>
             </li>
