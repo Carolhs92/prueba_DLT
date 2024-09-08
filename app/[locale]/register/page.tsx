@@ -30,9 +30,16 @@ export default function RegisterPage() {
     setError('');
 
     try {
-      await registerUser({ email, password, name, role: selectedType });
+      const response = await registerUser({ email, password, name, role: selectedType });
+      const { role } = response;
 
-      window.location.href = '/login';
+      if (role === 'maestro') {
+        window.location.href = `/maestro/criaturas`;
+      } else if (role === 'cuidador') {
+        window.location.href = `/perfiles/criaturas`;
+      } else {
+        setError('Rol no válido');
+      }
     } catch (err: any) {
       setError(err.message);
     } finally {

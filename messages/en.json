@@ -8,7 +8,8 @@
     "holder_password": "Enter your password",
     "enter": "Enter the sanctuary",
     "register": "Don't have an account? Register as a master or caretaker.",
-    "Picture": "Picture of the magical animal"
+    "Picture": "Picture of the magical animal",
+    "cargando":"Loading..."
   }, "register": {
     "title": "Join the Sanctuary",
     "about": "Choose whether you will be a caretaker or a master of creatures. Fill in the details to get started.",

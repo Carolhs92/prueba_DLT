@@ -8,7 +8,8 @@
     "holder_password":"Introduece tu contraseña",
     "enter": "Acceder al santuario",
     "register": "¿No tienes cuenta? Regístrate como maestro o cuidador.",
-    "Picture": "La imagen del animal mágico"
+    "Picture": "La imagen del animal mágico",
+    "cargando":"Cargando..."
   }, "register": {
     "title": "Únete al santuario",
     "about": "Elige si serás un cuidador o un maestro de criaturas. Completa los detalles para comenzar.",

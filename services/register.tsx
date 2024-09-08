@@ -1,6 +1,8 @@
-import { auth, db } from '@/lib/firebase';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { doc, setDoc } from 'firebase/firestore';
+import { auth } from '@/lib/firebase';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { getFirestore, doc, setDoc } from 'firebase/firestore'
+
+const db = getFirestore();
 
 interface RegisterData {
   email: string;
@@ -11,18 +13,18 @@ interface RegisterData {
 
 export async function registerUser({ email, password, name, role }: RegisterData) {
   try {
-    // Crear el usuario en Firebase Auth
+    // Crear
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
 
-    // Guardar la información adicional del usuario en Firestore
+    // Guardar 
     await setDoc(doc(db, 'users', user.uid), {
-      name: name,
-      email: email,
-      role: role,
+      name,
+      email,
+      role,
     });
-
-    return { success: true, user };
+    await signInWithEmailAndPassword(auth, email, password);
+    return { success: true, user, role };
 
   } catch (err: any) {
     if (err.code === 'auth/email-already-in-use') {

@@ -81,6 +81,7 @@
   .navigation__nav__ul {
     justify-content: center; 
     width: 100%;
+    margin-top: 20px;
   }
 
   .navigation__nav__li {
@@ -94,6 +95,7 @@
     padding: 15px 0;
     width: 100%; 
     text-align: center; 
+    &:hover,
     &--active {  
       padding: 10px;
     }
