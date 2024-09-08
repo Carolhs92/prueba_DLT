@@ -94,6 +94,9 @@
     padding: 15px 0;
     width: 100%; 
     text-align: center; 
+    &--active {  
+      padding: 10px;
+    }
   }
 
   .navigation__title {

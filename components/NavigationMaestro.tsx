@@ -5,13 +5,13 @@ import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import style from '@/styles/nav.module.scss';
 
-export function Navigation() {
+export function NavigationMaestro() {
   const t = useTranslations('Navigation');
   const pathname = usePathname();
 
   const links = [
-    { label: t('criaturas'), href: { pathname: '/perfiles/criaturas' } },
-    { label: t('perfil'), href: { pathname: '/perfiles/perfil' } },
+    { label: t('criaturas'), href: { pathname: '/maestro/criaturas' } },
+    { label: t('perfil'), href: { pathname: '/maestro/perfil' } },
     { label: t('sesion'), href: { pathname: '#' } },                      
   ];
 
