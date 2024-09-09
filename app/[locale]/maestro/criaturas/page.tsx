@@ -154,7 +154,7 @@ const CriaturasPage = () => {
                         src="/icons/pencil.png"
                         width={20}
                         height={20}
-                        alt="Editar"
+                        alt="editar"
                         onClick={() => handleEditClick(criatura.id)} 
                         className={style['criaturas-page__edit-icon']}
                       />
@@ -167,7 +167,7 @@ const CriaturasPage = () => {
                             }} 
                             className={style['criaturas-page__link']}
                           >
-                            {t('Editar')}
+                            {t('editar')}
                           </Link>
                           <button onClick={() => handleDelete(criatura.id)} className={style['criaturas-page__link']}>{t('Borrar')}</button>
                         </div>
@@ -211,7 +211,7 @@ const CriaturasPage = () => {
                         src="/icons/pencil.png"
                         width={20}
                         height={20}
-                        alt="Editar"
+                        alt="editar"
                         onClick={() => handleEditClick(criatura.id)} 
                         className={style['criaturas-page__edit-icon']}
                       />
@@ -224,7 +224,7 @@ const CriaturasPage = () => {
                             }} 
                             className={style['criaturas-page__link']}
                           >
-                            {t('Editar')}
+                            {t('editar')}
                           </Link>
                           <button onClick={() => handleDelete(criatura.id)} className={style['criaturas-page__link']}>{t('Borrar')}</button>
                         </div>
