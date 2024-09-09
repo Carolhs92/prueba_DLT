@@ -5,6 +5,7 @@ import style from '@/styles/criaturas.module.scss';
 import Image from 'next/image';
 import useFetchCriaturas from '@/hooks/useFetchCriaturas';
 import Link from 'next/link';
+import { deleteCriatura } from '@/services/eliminarCriatura'; 
 
 const CriaturasPage = () => {
   const t = useTranslations('Criaturas');
@@ -22,6 +23,16 @@ const CriaturasPage = () => {
     }
   };
 
+  const handleDelete = async (criaturaId: string) => {
+    try {
+      await deleteCriatura(criaturaId);
+      console.log(`Borrada criatura con ID: ${criaturaId}`);
+      window.location.reload();
+    } catch (error) {
+      console.error('Error al eliminar la criatura:', error);
+    }
+  };
+
   const handleFiltrar = () => {
     console.log('Criaturas seleccionadas:', selectedTypes);
   };
@@ -36,11 +47,6 @@ const CriaturasPage = () => {
 
   const handleEditClick = (criaturaId: string) => {
     setSelectedCriaturaId((prevId) => (prevId === criaturaId ? null : criaturaId));
-  };
-
-  /*HACER UN SERVICIO */
-  const handleDelete = (criaturaId: string) => {
-    console.log(`Borrar criatura con ID: ${criaturaId}`);
   };
 
   // Clic fuera del dropdown

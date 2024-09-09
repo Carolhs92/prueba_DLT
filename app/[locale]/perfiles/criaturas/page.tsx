@@ -38,12 +38,6 @@ const CriaturasPage = () => {
     setSelectedCriaturaId((prevId) => (prevId === criaturaId ? null : criaturaId));
   };
 
-  /*HACER UN SERVICIO */
-  const handleDelete = (criaturaId: string) => {
-    console.log(`Borrar criatura con ID: ${criaturaId}`);
-    // Aquí puedes agregar la lógica para eliminar la criatura
-  };
-
   // Clic fuera del dropdown
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -162,7 +156,6 @@ const CriaturasPage = () => {
                           >
                             {t('Editar')}
                           </Link>
-                          <button onClick={() => handleDelete(criatura.id)} className={style['criaturas-page__link']}>{t('Borrar')}</button>
                         </div>
                       )}
                         </td>
