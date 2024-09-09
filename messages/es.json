@@ -50,6 +50,8 @@
     "entrenamiento":"¿Entrenada?",
     "entrenado":"Entrenado",
     "acciones":"Acciones",
+    "Editar": "Editar",
+    "Borrar": "Borrar",
     "si":"Sí",
     "no":"No",
     "registrar":"Registrar criatura",
@@ -62,7 +64,9 @@
     "filtro": "Filtrar",
     "filtrar":"Confirmar",
     "buscar":"Buscar por tipo",
-    "palabra": "Palabra mágica"
+    "palabra": "Palabra mágica",
+    "cargando":"Cargando criaturas...",
+    "sin_criaturas":"No hay criaturas creadas."
   }, "Perfil": {
     "titulo": "Mi perfil",
     "descripcion": "Este es el lugar donde podrás gestionar, actualizar y personalizar la información de tu perfil.",
@@ -73,7 +77,8 @@
     "descripcion_personaje": "Soy un guardián del bosque y protector de criaturas mágicas. Soy un tanto excéntrico. dedico mi vida a cuidar de una vasta variedad de seres fantástico, desde majestuosos dragones hasta diminutas hadas. Poseo un vasto conocimiento de las artes curativas y la magia antigua, lo que me permite sanar y proteger a las criaturas que encuentro en sus viajes.",
     "descripcion_personaje2":"Soy Jaime el Valiente, maestro en las artes de invocar y dominar criaturas. En mis partidas, cada criatura tiene una historia, un propósito, y un papel crucial en las épicas aventuras. Desde dragones imponentes hasta criaturas misteriosas de los bosques.",
     "cuidador": "Cuidador",
-    "maestro": "Maestro"
+    "maestro": "Maestro",
+    "Cargando":"Cargando..."
   }
   
 }

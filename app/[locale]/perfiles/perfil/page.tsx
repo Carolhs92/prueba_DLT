@@ -113,7 +113,7 @@ const PerfilPage = () => {
               className={style['perfil-page__textarea']}
               placeholder={t('descripcion_personaje2')}
               disabled
-              rows={5}
+              rows={3}
             />
           </div>
         </form>

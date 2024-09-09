@@ -50,6 +50,8 @@
     "entrenamiento": "Trained?",
     "entrenado":"Trained",
     "acciones":"Actions",
+    "Editar": "Edit",
+    "Borrar": "Delete",
     "si": "Yes",
     "no": "No",
     "registrar": "Register Creature",
@@ -62,7 +64,9 @@
     "filtro": "Filter",
     "filtrar": "confirm",
     "buscar": "Search by type",
-    "palabra": "Magic Word"
+    "palabra": "Magic Word",
+    "cargando":"Loading creatures...",
+    "sin_criaturas":"No creatures found"
   }, "Perfil": {
     "titulo": "My Profile",
     "descripcion": "This is the place where you can manage, update, and personalize your profile information.",
@@ -73,6 +77,7 @@
     "descripcion_personaje": "I am a guardian of the forest and protector of magical creatures. I am somewhat eccentric. I dedicate my life to caring for a vast variety of fantastic beings, from majestic dragons to tiny fairies. I possess a vast knowledge of healing arts and ancient magic, which allows me to heal and protect the creatures I encounter on my journeys.",
     "descripcion_personaje2": "I am Jaime the Brave, master in the arts of summoning and controlling creatures. In my games, each creature has a story, a purpose, and a crucial role in epic adventures. From towering dragons to mysterious creatures of the forests.",
     "cuidador": "Caretaker",
-    "maestro": "Master"
+    "maestro": "Master",
+    "cargando":"Loading..."
   }
 }

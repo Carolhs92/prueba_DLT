@@ -144,7 +144,46 @@
     color: #838181;
     font-family: 'Times New Roman', Times, serif;
     border-bottom: 1px solid #9C5CE1;
+    position: relative;
   }
+  &__actions {
+    position: relative; 
+    display: inline-block;
+  }
+
+  &__dropdown-container {
+    position: absolute; 
+    top: 30px; 
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+  }
+
+  &__link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #666;
+    text-decoration: none;
+
+    background: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
 }
 
 .select {

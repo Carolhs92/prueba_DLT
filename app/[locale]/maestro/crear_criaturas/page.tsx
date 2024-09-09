@@ -3,15 +3,50 @@ import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import CustomSelect from '@/components/CustomSelect'; 
 import style from '@/styles/criaturas.module.scss';
-import { useRouter } from 'next/navigation'; 
+import { crearCriatura } from '@/services/crearCriaturas';
 
 const CriaturasPage = () => {
   const t = useTranslations('Criaturas');
   const [selectedType, setSelectedType] = useState('fenix');
-  const router = useRouter();
+  const [nombre, setNombre] = useState('');
+  const [poder, setPoder] = useState(''); 
+  const [entrenada, setEntrenada] = useState('');
 
   const handleTypeChange = (value: string) => {
     setSelectedType(value);
+  };
+
+  const handleEntrenadaChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEntrenada(e.target.value);
+  };
+
+  const handlePoderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPoder(e.target.value); 
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      const userId = "uid_usuario"; 
+      const poderNumerico = parseInt(poder, 10);
+
+      if (isNaN(poderNumerico)) {
+        console.error('El valor del poder no es un número válido.');
+        return;
+      }
+
+      await crearCriatura({
+        nombre,
+        tipo: selectedType,
+        poder: poderNumerico,
+        entrenada: entrenada === 'si',
+        usuarioId: userId
+      });
+      window.location.href = `/maestro/criaturas`;
+    } catch (error) {
+      console.error('Error al crear criatura', error);
+    }
   };
 
   const options = [
@@ -21,11 +56,6 @@ const CriaturasPage = () => {
     { value: 'vampiro', label: t('vampiro') },
     { value: 'unicornio', label: t('unicornio') },
   ];
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    window.location.href = '/maestro/criaturas'; 
-  };
 
   return (
     <main className={style['criaturas-page']}>
@@ -46,7 +76,10 @@ const CriaturasPage = () => {
               name="nombre"
               className={style['criaturas-page__input']}
               type="text"
+              value={nombre} 
+              onChange={(e) => setNombre(e.target.value)} 
               placeholder={t('holder_nombre')}
+              required
             />
           </div>
           <div className={style['select']}>
@@ -68,7 +101,10 @@ const CriaturasPage = () => {
               name="poder"
               className={style['criaturas-page__input']}
               type="number"
+              value={poder} 
+              onChange={handlePoderChange} 
               placeholder={t('holder_poder')}
+              required
             />
           </div>
           <div className={style['criaturas-page__input-container']}>
@@ -81,6 +117,8 @@ const CriaturasPage = () => {
                     id="entrenamiento-si"
                     name="entrenamiento"
                     value="si"
+                    checked={entrenada === 'si'} 
+                    onChange={handleEntrenadaChange} 
                     className={style['criaturas-page__checkbox']}
                   />
                   {t('si')}
@@ -91,6 +129,8 @@ const CriaturasPage = () => {
                     id="entrenamiento-no"
                     name="entrenamiento"
                     value="no"
+                    checked={entrenada === 'no'} 
+                    onChange={handleEntrenadaChange} 
                     className={style['criaturas-page__checkbox']}
                   />
                   {t('no')}
