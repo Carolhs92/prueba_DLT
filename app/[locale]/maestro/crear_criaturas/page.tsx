@@ -97,7 +97,7 @@ const CriaturasPage = () => {
         });
       }
 
-      window.location.href = `/perfiles/criaturas`; 
+      window.location.href = `/maestro/criaturas`; 
     } catch (error) {
       console.error('Error al crear o actualizar criatura', error);
     }
