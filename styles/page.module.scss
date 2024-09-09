@@ -4,14 +4,14 @@
   align-items: center;
   justify-content: flex-start; 
   flex-direction: row;
-  height: 100vh;  /* Mantén la altura completa de la ventana */
+  height: 100vh;  
   overflow: hidden;
 
   &__image {
     flex: 0 0 auto;
-    width: auto; /* El ancho se ajusta automáticamente */
-    height: 100%; /* La imagen siempre ocupará el alto completo */
-    object-fit: cover; /* Mantiene el ajuste para cubrir el área del contenedor */
+    width: auto; 
+    height: 100%; 
+    object-fit: cover;
   }
 
   &__content {

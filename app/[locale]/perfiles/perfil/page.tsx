@@ -3,22 +3,18 @@ import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import CustomSelect from '@/components/CustomSelect'; 
 import style from '@/styles/perfil.module.scss';
-// import RoleBasedLayout from '@/layouts/cuidadorLayout/RoleBasedLayout';
 
 const PerfilPage = () => {
   const t = useTranslations('Perfil');
   const [selectedType, setSelectedType] = useState('fenix');
-  const [role, setRole] = useState<'cuidador' | 'maestro'>('cuidador'); // Estado para el rol del usuario
+  const [role, setRole] = useState<'cuidador' | 'maestro'>('cuidador');
 
   useEffect(() => {
-    // Determinamos el tipo guardado en el registro desde localStorage
     const savedType = localStorage.getItem('selectedType');
     if (savedType) {
       setSelectedType(savedType);
     }
-
-    // Simulamos la obtención del rol del usuario (esto puede venir de una API, contexto, etc.)
-    setRole('cuidador'); // O 'maestro', dependiendo de la lógica de tu aplicación
+    setRole('cuidador'); 
   }, []);
 
   const handleTypeChange = (value: string) => {
@@ -35,7 +31,6 @@ const PerfilPage = () => {
   ];
 
   return (
-    // <RoleBasedLayout role={role}>
       <main className={style['perfil-page']}>
         <div className={style['perfil-page__content']}>
           <h3 className={style['perfil-page__title']}>{t('titulo')}</h3>
@@ -94,7 +89,6 @@ const PerfilPage = () => {
           </form>
         </div>
       </main>
-    // </RoleBasedLayout>
   );
 };
 

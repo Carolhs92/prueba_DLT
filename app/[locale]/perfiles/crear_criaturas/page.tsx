@@ -3,18 +3,15 @@ import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import CustomSelect from '@/components/CustomSelect'; 
 import style from '@/styles/criaturas.module.scss';
-import { useRouter } from 'next/navigation'; // No lo necesitamos aquí ya que usas `window.location.href`
 
 const CriaturasPage = () => {
   const t = useTranslations('Criaturas');
   const [selectedType, setSelectedType] = useState('fenix');
-  const [role, setRole] = useState<'cuidador' | 'maestro'>('cuidador'); // Estado para el rol del usuario
+  const [role, setRole] = useState<'cuidador' | 'maestro'>('cuidador');
 
   useEffect(() => {
-    // Aquí deberías determinar el rol del usuario
-    // Esto podría venir de una API o un contexto
-    // Para este ejemplo, asumimos que es 'cuidador'
-    setRole('cuidador'); // O 'maestro' según la lógica de tu aplicación
+    // determinar el rol del usuario
+    setRole('cuidador'); 
   }, []);
 
   const handleTypeChange = (value: string) => {
@@ -31,8 +28,6 @@ const CriaturasPage = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Aquí puedes manejar la lógica de envío del formulario (por ejemplo, llamar a una API)
-
     window.location.href = '/perfiles/criaturas';
   };
 

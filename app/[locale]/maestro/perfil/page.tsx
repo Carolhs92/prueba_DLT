@@ -3,16 +3,12 @@ import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import CustomSelect from '@/components/CustomSelect'; 
 import style from '@/styles/perfil.module.scss';
-// import MaestroLayout from '@/layouts/cuidadorLayout/MaestroLayout';
 
 const PerfilPage = () => {
   const t = useTranslations('Perfil');
-  
-  // Estado inicial basado en el valor guardado en el registro.
   const [selectedType, setSelectedType] = useState('fenix');
 
   useEffect(() => {
-    // obteniendo el tipo guardado en el registro desde localStorage
     const savedType = localStorage.getItem('selectedType');
     if (savedType) {
       setSelectedType(savedType);
@@ -21,7 +17,6 @@ const PerfilPage = () => {
 
   const handleTypeChange = (value: string) => {
     setSelectedType(value);
-    // Guardar el tipo seleccionado en localStorage
     localStorage.setItem('selectedType', value);
   };
 
@@ -34,7 +29,6 @@ const PerfilPage = () => {
   ];
 
   return (
-//   <MaestroLayout>
     <main className={style['perfil-page']}>
       <div className={style['perfil-page__content']}>
         <h3 className={style['perfil-page__title']}>{t('titulo')}</h3>
@@ -93,7 +87,6 @@ const PerfilPage = () => {
         </form>
       </div>
     </main>
-//   </MaestroLayout>
   );
 };
 

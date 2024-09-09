@@ -155,13 +155,7 @@
 
 
 /* Media Queries para pantallas pequeñas */
-@media (max-width: 768px) {     
-// .criaturas-page{
-//     width: 60%;
-//     padding-top: 40px;
-
-  // }   
-  
+@media (max-width: 768px) {       
   .criaturas-page__form {
     align-items: flex-start;
     flex-direction: column; 

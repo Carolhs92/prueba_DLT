@@ -6,21 +6,19 @@ import Image from 'next/image';
 
 const CriaturasPage = () => {
   const t = useTranslations('Criaturas');
-  const [selectedTypes, setSelectedTypes] = useState<string[]>([]); // Cambiamos a array de strings
+  const [selectedTypes, setSelectedTypes] = useState<string[]>([]); 
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value, checked } = event.target;
     if (checked) {
-      setSelectedTypes((prev) => [...prev, value]); // Agregar al array
+      setSelectedTypes((prev) => [...prev, value]);
     } else {
-      setSelectedTypes((prev) => prev.filter((criatura) => criatura !== value)); // Remover del array
+      setSelectedTypes((prev) => prev.filter((criatura) => criatura !== value)); 
     }
   };
 
   const handleFiltrar = () => {
-    // Aquí puedes manejar el filtrado de las criaturas seleccionadas
     console.log('Criaturas seleccionadas:', selectedTypes);
-    // Realiza el filtrado según tus necesidades
   };
 
   const options = [

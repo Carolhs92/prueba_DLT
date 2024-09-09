@@ -21,8 +21,6 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
     <html lang={locale}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {/* <SidebarImage />
-          <Navigation /> */}
           <main>{children}</main>
         </NextIntlClientProvider>
       </body>
