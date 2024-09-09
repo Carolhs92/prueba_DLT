@@ -118,6 +118,7 @@
     width: 62%;
     margin-left: 5%;
     border-collapse: collapse;
+    margin-top: 20px;
   }
   &__table {
     width: 100%;
@@ -182,6 +183,9 @@
     &:hover {
       box-shadow: none;
     }
+  }
+  &__total{
+    margin-top: 40px;
   }
 
 }

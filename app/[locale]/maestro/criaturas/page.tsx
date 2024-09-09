@@ -6,10 +6,12 @@ import Image from 'next/image';
 import useFetchCriaturas from '@/hooks/useFetchCriaturas';
 import Link from 'next/link';
 import { deleteCriatura } from '@/services/eliminarCriatura'; 
+import useFetchAllCriaturas from '@/hooks/useFetchAllCriaturas';
 
 const CriaturasPage = () => {
   const t = useTranslations('Criaturas');
-  const { criaturas, loading, error } = useFetchCriaturas();
+  const { criaturas: userCriaturas, loading: userLoading, error: userError } = useFetchCriaturas();
+  const { criaturas: allCriaturas, loading: allLoading, error: allError } = useFetchAllCriaturas();
   const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
   const [selectedCriaturaId, setSelectedCriaturaId] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null); // dropdown
@@ -125,10 +127,10 @@ const CriaturasPage = () => {
               />
             </div>
 
-            {loading && <p>{t('cargando')}</p>}
-            {error && <p>Error: {error}</p>}
-            {!loading && !error && criaturas.length === 0 && <p>{t('sin_criaturas')}</p>}
-            {!loading && !error && criaturas.length > 0 && (
+              {userLoading && <p>{t('cargando')}</p>}
+              {userError && <p>Error: {userError}</p>}
+              {!userLoading && !userError && userCriaturas.length === 0 && <p>{t('sin_criaturas')}</p>}
+              {!userLoading && !userError && userCriaturas.length > 0 && (
               <div>
                 <table className={style['criaturas-page__table']}>
                   <thead className={style['criaturas-page__thead']}>
@@ -141,7 +143,7 @@ const CriaturasPage = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {criaturas.map((criatura) => (
+                    {userCriaturas .map((criatura) => (
                       <tr className={style['criaturas-page__tr']} key={criatura.id}>
                         <td className={style['criaturas-page__td']}>{criatura.nombre}</td>
                         <td className={style['criaturas-page__td']}>{criatura.tipo}</td>
@@ -178,6 +180,62 @@ const CriaturasPage = () => {
               </div>
             )}
           </div>
+          
+        </section>
+        <section className={style['criaturas-page__total']}>
+          <h3 className={style['criaturas-page__title3']}>{t('total_criaturas')}</h3>
+            {allLoading && <p>{t('cargando')}</p>}
+            {allError && <p>Error: {allError}</p>}
+            {!allLoading && !allError && allCriaturas.length === 0 && <p>{t('sin_criaturas')}</p>}
+            {!allLoading && !allError && allCriaturas.length > 0 && (
+              <div>
+                <table className={style['criaturas-page__table']}>
+                  <thead className={style['criaturas-page__thead']}>
+                    <tr className={style['criaturas-page__tr']}>
+                      <th className={style['criaturas-page__th']}>{t('holder_nombre2')}</th>
+                      <th className={style['criaturas-page__th']}>{t('tipo2')}</th>
+                      <th className={style['criaturas-page__th']}>{t('nivel')}</th>
+                      <th className={style['criaturas-page__th']}>{t('entrenado')}</th>
+                      <th className={style['criaturas-page__th']}>{t('acciones')}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {allCriaturas .map((criatura) => (
+                      <tr className={style['criaturas-page__tr']} key={criatura.id}>
+                        <td className={style['criaturas-page__td']}>{criatura.nombre}</td>
+                        <td className={style['criaturas-page__td']}>{criatura.tipo}</td>
+                        <td className={style['criaturas-page__td']}>{criatura.poder}</td>
+                        <td className={style['criaturas-page__td']}>{criatura.entrenada ? t('si') : t('no')}</td>
+                        <td className={style['criaturas-page__td']}>
+                        <Image
+                        src="/icons/pencil.png"
+                        width={20}
+                        height={20}
+                        alt="Editar"
+                        onClick={() => handleEditClick(criatura.id)} 
+                        className={style['criaturas-page__edit-icon']}
+                      />
+                      {selectedCriaturaId === criatura.id && (
+                        <div className={style['criaturas-page__dropdown-container']}>
+                          <Link 
+                            href={{
+                              pathname: '/maestro/crear_criaturas',
+                              query: { criaturaId: criatura.id },
+                            }} 
+                            className={style['criaturas-page__link']}
+                          >
+                            {t('Editar')}
+                          </Link>
+                          <button onClick={() => handleDelete(criatura.id)} className={style['criaturas-page__link']}>{t('Borrar')}</button>
+                        </div>
+                      )}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
         </section>
       </div>
     </main>
