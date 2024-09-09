@@ -72,12 +72,7 @@
     "descripcion2": "Description",
     "descripcion_personaje": "I am a guardian of the forest and protector of magical creatures. I am somewhat eccentric. I dedicate my life to caring for a vast variety of fantastic beings, from majestic dragons to tiny fairies. I possess a vast knowledge of healing arts and ancient magic, which allows me to heal and protect the creatures I encounter on my journeys.",
     "descripcion_personaje2": "I am Jaime the Brave, master in the arts of summoning and controlling creatures. In my games, each creature has a story, a purpose, and a crucial role in epic adventures. From towering dragons to mysterious creatures of the forests.",
-    "dragon": "Dragon",
-    "fenix": "Phoenix",
-    "golem": "Golem",
-    "vampiro": "Vampire",
-    "unicornio": "Unicorn",
-    "holder_tipo": "Type of profile",
-    "falta": "falta"
+    "cuidador": "Caretaker",
+    "maestro": "Master"
   }
 }

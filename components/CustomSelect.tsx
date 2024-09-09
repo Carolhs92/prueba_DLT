@@ -16,7 +16,16 @@ interface CustomSelectProps {
 
 const CustomSelect: React.FC<CustomSelectProps> = ({ options, value, onChange, disabled }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState<Option | undefined>(() =>
+    options.find(option => option.value === value)
+  );
   const selectRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // actualizamos la opción seleccionada
+    const newSelectedOption = options.find(option => option.value === value);
+    setSelectedOption(newSelectedOption);
+  }, [value, options]);
 
   const handleSelectClick = () => {
     if (!disabled) {
@@ -43,8 +52,6 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, value, onChange, d
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
-
-  const selectedOption = options.find(option => option.value === value);
 
   return (
     <div className={`custom-select ${disabled ? 'disabled' : ''}`} ref={selectRef}>
